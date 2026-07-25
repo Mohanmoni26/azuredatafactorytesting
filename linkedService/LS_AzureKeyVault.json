@@ -1,0 +1,28 @@
+{
+	"name": "LS_AzureKeyVault",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "SalesDB",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "moniraj",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "KeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password1"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

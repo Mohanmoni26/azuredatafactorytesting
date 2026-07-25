@@ -1,0 +1,13 @@
+{
+	"name": "LS_SOURCE_JSON",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html#Example10",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

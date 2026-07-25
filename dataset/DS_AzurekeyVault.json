@@ -1,0 +1,17 @@
+{
+	"name": "DS_AzurekeyVault",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureKeyVault",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Sales",
+			"table": "Orders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

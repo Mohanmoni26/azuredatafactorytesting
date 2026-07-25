@@ -1,0 +1,18 @@
+{
+	"name": "DS_SOURCE_BINARYTXT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_OUPTPU_CSV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "outputfile"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

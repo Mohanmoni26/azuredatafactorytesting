@@ -1,0 +1,24 @@
+{
+	"name": "STO_Trigger_BLOB_ADLS",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_Blob_EventTriggger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/storageeventtarget/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/e1488251-644c-458d-bf44-a929c2c66724/resourceGroups/adfmoniproject/providers/Microsoft.Storage/storageAccounts/adlsmonidev",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

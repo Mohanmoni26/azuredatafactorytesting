@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQLServwe",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "SalesDB",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "moniraj",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyODY0N2IzMy0xYzA3LTRjNmItYjQ1YS02YjZkZGI4NDQ1YTgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

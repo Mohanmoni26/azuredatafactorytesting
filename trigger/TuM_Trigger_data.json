@@ -1,0 +1,27 @@
+{
+	"name": "TuM_Trigger_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "PL_Blob_EventTriggger",
+				"type": "PipelineReference"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Hour",
+			"interval": 2,
+			"startTime": "2026-07-25T11:37:00Z",
+			"endTime": "2026-07-26T01:42:54Z",
+			"delay": "00:02:00",
+			"maxConcurrency": 10,
+			"retryPolicy": {
+				"count": 2,
+				"intervalInSeconds": 59
+			},
+			"dependsOn": []
+		}
+	}
+}

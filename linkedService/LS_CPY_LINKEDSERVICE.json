@@ -1,0 +1,21 @@
+{
+	"name": "LS_CPY_LINKEDSERVICE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost\\SQLEXPRESS",
+			"database": "monii",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "moniraj",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNGIxOTUzZS0yMDU3LTQ5NmEtYTE3ZS04ZGJiMGY2ZmZmMzYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
