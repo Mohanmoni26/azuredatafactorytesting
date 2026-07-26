@@ -1,0 +1,30 @@
+{
+	"name": "DS_LKUP_MAXValue",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Watermark_SQL_Parent",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schemaname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset.tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
