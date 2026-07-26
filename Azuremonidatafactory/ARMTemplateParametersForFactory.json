@@ -1,0 +1,273 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Azuremonidatafactory"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage6_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage7_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage8_accountKey": {
+			"value": ""
+		},
+		"DS_ADLS_CSV_accountKey": {
+			"value": ""
+		},
+		"DS_Blob_ADLS_Trigger_connectionString": {
+			"value": ""
+		},
+		"DS_Filename_accountKey": {
+			"value": ""
+		},
+		"DS_OUTPUT_BLOB_ADLS_PARQUET_accountKey": {
+			"value": ""
+		},
+		"LSS_SOURCE_CSVS_connectionString": {
+			"value": ""
+		},
+		"LSS_Sourcw_csv_connectionString": {
+			"value": ""
+		},
+		"LS_ADLS_BLOB_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_BLOBB_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_Trigger_accountKey": {
+			"value": ""
+		},
+		"LS_BINARYTXT_connectionString": {
+			"value": ""
+		},
+		"LS_BLOB_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_Binary_ADLS_connectionString": {
+			"value": ""
+		},
+		"LS_CPY_LINKEDSERVICE_password": {
+			"value": ""
+		},
+		"LS_GETMETADATAACTIVITY_accountKey": {
+			"value": ""
+		},
+		"LS_Metadataactivity_accountKey": {
+			"value": ""
+		},
+		"LS_OUPTPU_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_OnPremises_SQLServer_DW_password": {
+			"value": ""
+		},
+		"LS_PARQUET_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_SOURCE_CSVS_accountKey": {
+			"value": ""
+		},
+		"LS_SQLServwe_password": {
+			"value": ""
+		},
+		"LS_SQL_ParquetTable1_accountKey": {
+			"value": ""
+		},
+		"LS_Sink_Parquets_accountKey": {
+			"value": ""
+		},
+		"LS_Source_csvss_connectionString": {
+			"value": ""
+		},
+		"LS_Watermark_SQL_Parent_password": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage6_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage7_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage8_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"DS_ADLS_CSV_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"DS_Filename_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"DS_OUTPUT_BLOB_ADLS_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"DS_Parentpipeline_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"DS_Parentpipeline_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"DS_Parentpipeline_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"KeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://KeyValultSQLServer.vault.azure.net/"
+		},
+		"KeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://KeyValultSQLServer.vault.azure.net/"
+		},
+		"LS_ADLS_BLOB_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_ADLS_BLOBB_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_ADLS_Trigger_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_database": {
+			"value": "SalesDB"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_BLOB_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_CPY_LINKEDSERVICE_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_CPY_LINKEDSERVICE_properties_typeProperties_database": {
+			"value": "monii"
+		},
+		"LS_CPY_LINKEDSERVICE_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_GETMETADATAACTIVITY_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_KeyVault_SQLserver_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_KeyVault_SQLserver_properties_typeProperties_database": {
+			"value": "SalesDB"
+		},
+		"LS_KeyVault_SQLserver_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_Metadataactivity_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_OUPTPU_CSV_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_OnPremises_SQLServer_DW_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_OnPremises_SQLServer_DW_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"LS_OnPremises_SQLServer_DW_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_PARQUET_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_CSVS_properties_typeProperties_url": {
+			"value": "https://blobmonidev.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_JSON_properties_typeProperties_url": {
+			"value": "https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html#Example10"
+		},
+		"LS_SQLServer_MAXValue_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLServer_MAXValue_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"LS_SQLServer_MAXValue_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_SQLServwe_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLServwe_properties_typeProperties_database": {
+			"value": "SalesDB"
+		},
+		"LS_SQLServwe_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"LS_SQL_ParquetTable1_properties_typeProperties_url": {
+			"value": "https://adlsdevmoni.dfs.core.windows.net"
+		},
+		"LS_Sink_Parquets_properties_typeProperties_url": {
+			"value": "https://adlsmonidev.dfs.core.windows.net/"
+		},
+		"LS_Watermark_SQL_Parent_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_Watermark_SQL_Parent_properties_typeProperties_database": {
+			"value": "RetailDW_Dev"
+		},
+		"LS_Watermark_SQL_Parent_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "monii"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "moniraj"
+		},
+		"STO_Trigger_BLOB_ADLS_properties_typeProperties_scope": {
+			"value": "/subscriptions/e1488251-644c-458d-bf44-a929c2c66724/resourceGroups/adfmoniproject/providers/Microsoft.Storage/storageAccounts/adlsmonidev"
+		}
+	}
+}
