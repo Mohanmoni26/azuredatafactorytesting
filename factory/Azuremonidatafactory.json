@@ -1,0 +1,15 @@
+{
+	"name": "Azuremonidatafactory",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "dad59f0f-5afe-451c-b751-4ecd5b971f79",
+		"tenantId": "acb8a0a2-1f6b-4350-a02a-382c3af5f415"
+	}
+}
