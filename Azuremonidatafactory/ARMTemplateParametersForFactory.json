@@ -71,7 +71,13 @@
 		"LS_Binary_ADLS_connectionString": {
 			"value": ""
 		},
+		"LS_Blob_ADLS_CSV_connectionString": {
+			"value": ""
+		},
 		"LS_CPY_LINKEDSERVICE_password": {
+			"value": ""
+		},
+		"LS_CSV_CSV_ADLS_accountKey": {
 			"value": ""
 		},
 		"LS_GETMETADATAACTIVITY_accountKey": {
@@ -187,6 +193,9 @@
 		},
 		"LS_CPY_LINKEDSERVICE_properties_typeProperties_userName": {
 			"value": "moniraj"
+		},
+		"LS_CSV_CSV_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsdevmoni.dfs.core.windows.net/"
 		},
 		"LS_GETMETADATAACTIVITY_properties_typeProperties_url": {
 			"value": "https://adlsmonidev.dfs.core.windows.net/"

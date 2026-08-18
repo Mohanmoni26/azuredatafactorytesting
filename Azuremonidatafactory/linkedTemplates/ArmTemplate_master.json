@@ -95,9 +95,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'LS_Binary_ADLS'"
 		},
+		"LS_Blob_ADLS_CSV_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_ADLS_CSV'"
+		},
 		"LS_CPY_LINKEDSERVICE_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_CPY_LINKEDSERVICE'"
+		},
+		"LS_CSV_CSV_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_CSV_ADLS'"
 		},
 		"LS_GETMETADATAACTIVITY_accountKey": {
 			"type": "secureString",
@@ -250,6 +258,10 @@
 		"LS_CPY_LINKEDSERVICE_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "moniraj"
+		},
+		"LS_CSV_CSV_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevmoni.dfs.core.windows.net/"
 		},
 		"LS_GETMETADATAACTIVITY_properties_typeProperties_url": {
 			"type": "string",
@@ -619,8 +631,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"LS_OnPremises_SQLServer_DW_password": {
-						"value": "[parameters('LS_OnPremises_SQLServer_DW_password')]"
+					"LS_Blob_ADLS_CSV_connectionString": {
+						"value": "[parameters('LS_Blob_ADLS_CSV_connectionString')]"
+					},
+					"LS_CSV_CSV_ADLS_accountKey": {
+						"value": "[parameters('LS_CSV_CSV_ADLS_accountKey')]"
 					},
 					"DS_Parentpipeline_properties_typeProperties_server": {
 						"value": "[parameters('DS_Parentpipeline_properties_typeProperties_server')]"
@@ -640,6 +655,9 @@
 					"LS_AzureKeyVault_properties_typeProperties_userName": {
 						"value": "[parameters('LS_AzureKeyVault_properties_typeProperties_userName')]"
 					},
+					"LS_CSV_CSV_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_CSV_ADLS_properties_typeProperties_url')]"
+					},
 					"LS_KeyVault_SQLserver_properties_typeProperties_server": {
 						"value": "[parameters('LS_KeyVault_SQLserver_properties_typeProperties_server')]"
 					},
@@ -648,24 +666,6 @@
 					},
 					"LS_KeyVault_SQLserver_properties_typeProperties_userName": {
 						"value": "[parameters('LS_KeyVault_SQLserver_properties_typeProperties_userName')]"
-					},
-					"LS_OnPremises_SQLServer_DW_properties_typeProperties_server": {
-						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_server')]"
-					},
-					"LS_OnPremises_SQLServer_DW_properties_typeProperties_database": {
-						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_database')]"
-					},
-					"LS_OnPremises_SQLServer_DW_properties_typeProperties_userName": {
-						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_userName')]"
-					},
-					"LS_SQLServer_MAXValue_properties_typeProperties_server": {
-						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_server')]"
-					},
-					"LS_SQLServer_MAXValue_properties_typeProperties_database": {
-						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_database')]"
-					},
-					"LS_SQLServer_MAXValue_properties_typeProperties_userName": {
-						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -687,11 +687,32 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_OnPremises_SQLServer_DW_password": {
+						"value": "[parameters('LS_OnPremises_SQLServer_DW_password')]"
+					},
 					"LS_SQL_ParquetTable1_accountKey": {
 						"value": "[parameters('LS_SQL_ParquetTable1_accountKey')]"
 					},
 					"LS_Watermark_SQL_Parent_password": {
 						"value": "[parameters('LS_Watermark_SQL_Parent_password')]"
+					},
+					"LS_OnPremises_SQLServer_DW_properties_typeProperties_server": {
+						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_server')]"
+					},
+					"LS_OnPremises_SQLServer_DW_properties_typeProperties_database": {
+						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_database')]"
+					},
+					"LS_OnPremises_SQLServer_DW_properties_typeProperties_userName": {
+						"value": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_userName')]"
+					},
+					"LS_SQLServer_MAXValue_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_server')]"
+					},
+					"LS_SQLServer_MAXValue_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_database')]"
+					},
+					"LS_SQLServer_MAXValue_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_userName')]"
 					},
 					"LS_SQL_ParquetTable1_properties_typeProperties_url": {
 						"value": "[parameters('LS_SQL_ParquetTable1_properties_typeProperties_url')]"
@@ -704,9 +725,6 @@
 					},
 					"LS_Watermark_SQL_Parent_properties_typeProperties_userName": {
 						"value": "[parameters('LS_Watermark_SQL_Parent_properties_typeProperties_userName')]"
-					},
-					"STO_Trigger_BLOB_ADLS_properties_typeProperties_scope": {
-						"value": "[parameters('STO_Trigger_BLOB_ADLS_properties_typeProperties_scope')]"
 					}
 				}
 			},
@@ -727,6 +745,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"STO_Trigger_BLOB_ADLS_properties_typeProperties_scope": {
+						"value": "[parameters('STO_Trigger_BLOB_ADLS_properties_typeProperties_scope')]"
 					}
 				}
 			},

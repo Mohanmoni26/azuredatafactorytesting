@@ -7,9 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "Azuremonidatafactory"
 		},
-		"LS_OnPremises_SQLServer_DW_password": {
+		"LS_Blob_ADLS_CSV_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'LS_OnPremises_SQLServer_DW'"
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_ADLS_CSV'"
+		},
+		"LS_CSV_CSV_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_CSV_ADLS'"
 		},
 		"DS_Parentpipeline_properties_typeProperties_server": {
 			"type": "string",
@@ -35,6 +39,10 @@
 			"type": "string",
 			"defaultValue": "moniraj"
 		},
+		"LS_CSV_CSV_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevmoni.dfs.core.windows.net/"
+		},
 		"LS_KeyVault_SQLserver_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "localhost\\SQLEXPRESS"
@@ -44,30 +52,6 @@
 			"defaultValue": "SalesDB"
 		},
 		"LS_KeyVault_SQLserver_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "moniraj"
-		},
-		"LS_OnPremises_SQLServer_DW_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "localhost\\SQLEXPRESS"
-		},
-		"LS_OnPremises_SQLServer_DW_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "RetailDW_Dev"
-		},
-		"LS_OnPremises_SQLServer_DW_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "moniraj"
-		},
-		"LS_SQLServer_MAXValue_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "localhost\\SQLEXPRESS"
-		},
-		"LS_SQLServer_MAXValue_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "RetailDW_Dev"
-		},
-		"LS_SQLServer_MAXValue_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "moniraj"
 		}
@@ -515,6 +499,44 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/LS_Blob_ADLS_CSV')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('LS_Blob_ADLS_CSV_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/LS_CSV_CSV_ADLS')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('LS_CSV_CSV_ADLS_properties_typeProperties_url')]",
+					"accountKey": {
+						"type": "SecureString",
+						"value": "[parameters('LS_CSV_CSV_ADLS_accountKey')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/LS_KeyVault_SQLserver')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -535,58 +557,6 @@
 							"type": "LinkedServiceReference"
 						},
 						"secretName": "password"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_OnPremises_SQLServer_DW')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_server')]",
-					"database": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_OnPremises_SQLServer_DW_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('LS_OnPremises_SQLServer_DW_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/LS_SQLServer_MAXValue')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_server')]",
-					"database": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": true,
-					"authenticationType": "SQL",
-					"userName": "[parameters('LS_SQLServer_MAXValue_properties_typeProperties_userName')]",
-					"password": {
-						"type": "AzureKeyVaultSecret",
-						"store": {
-							"referenceName": "KeyVault",
-							"type": "LinkedServiceReference"
-						},
-						"secretName": "password1"
 					}
 				}
 			},
